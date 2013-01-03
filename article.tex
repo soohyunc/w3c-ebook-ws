@@ -1,0 +1,132 @@
+%  article.tex (Version 2.81, released 24 September 2003)
+%  Article to demonstrate format for SPIE Proceedings
+%  Special instructions are included in this file after the
+%  symbol %>>>>
+%  Numerous commands are commented out, but included to show how
+%  to effect various options, e.g., to print page numbers, etc.
+%  This LaTeX source file is composed for LaTeX2e,
+%  not the older LaTeX version 2.09, as previous versions were.
+
+%  The following commands have been added in the SPIE class
+%  file (spie.cls) and will not be understood in other classes:
+%  \supit{}, \authorinfo{}, \skiplinehalf, \keywords{}
+%  The bibliography style file is called spiebib.bst,
+%  which replaces the standard style unstr.bst.
+
+%% \documentclass[]{spie}  %>>> use for US letter paper
+\documentclass[a4paper]{spie}  %>>> use this instead for A4 paper
+\addtolength{\voffset}{9mm}   %>>> moves text field down
+
+%  The following command loads a graphics package to include images
+%  in the document. It may be necessary to specify a DVI driver option,
+%  e.g., [dvips], but that may be inappropriate for some LaTeX
+%  installations.
+\usepackage[]{graphicx}
+
+\title{On Implementing eBook-related Web Standards \\ on Smart Devices}
+
+%>>>> The author is responsible for formatting the
+%  author list and their institutions.  Use  \skiplinehalf
+%  to separate author list from addresses and between each address.
+%  The correspondence between each author and his/her address
+%  can be indicated with a superscript in italics,
+%  which is easily obtained with \supit{}.
+
+\author{Minhyung Ko and Soo-Hyun Choi\\
+% \skiplinehalf
+Samsung Electronics, Co., Ltd. \\
+\{\textsf{minhyung.ko, sh9.choi\}@samsung.com}\\
+}
+
+%>>>> Further information about the authors, other than their
+%  institution and addresses, should be included as a footnote,
+%  which is facilitated by the \authorinfo{} command.
+
+% \authorinfo{Further author information: (Send correspondence to A.A.A.)\\A.A.A.: E-mail: aaa@tbk2.edu, Telephone: 1 505 123 1234\\  B.B.A.: E-mail: bba@cmp.com, Telephone: +33 (0)1 98 76 54 32}
+%%>>>> when using amstex, you need to use @@ instead of @
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%>>>> uncomment following for page numbers
+\pagestyle{plain}
+%>>>> uncomment following to start page numbering at 301
+% \setcounter{page}{1}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+This document shows interest in participating the W3C workshop on ``eBooks: 
+Great Expectations for Web Standards''.
+\end{abstract}
+
+%>>>> Include a list of keywords after the abstract
+
+% \keywords{eBook, CSS3 Regions and Exclusions, MathML}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+\label{sect:intro}  % \label{} allows reference to this section
+We are currently working to develop best practices and guidelines for eBook 
+reader on smart devices. We hope to contribute to the W3C standardization 
+activities for eBook and the Open Web Platform in this respect. We are also 
+working to create devices for eBook that comply with the various W3C standards, 
+for example CSS3 Regions and Exclusions. We are particularly interested in 
+discussing about layout definition and control, accessibility, widgets 
+definitions, and standardization and conformance.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Point of View} \label{sect:view}
+
+\begin{itemize}
+
+    \item \textsf{W3C Standards like HTML5, SVG, MathML, Web APIs, MetaData, 
+        etc.}  \\
+        To this date, various requirements for eBook have already been addressed 
+        by the HTML5 and CSS3 W3C standards. We are actively contributing to the 
+W3C HTML5 specification, and we would like to contribute more in the eBook 
+related standards as well going forward.
+
+    \item \textsf{Layout definition and control} \\
+        We would like to seamlessy support rendering of the eBooks on devices 
+        with different screen resolutions and physical sizes. We would like to 
+        initiate a discussion on how to achieve the same.
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proposed Participants} \label{sect:ppl}
+
+\begin{itemize}
+    \item Min-Hyung Ko \\
+        {\small S/W Engineer \\
+        Next Generation S/W R\&D Group, \\
+        Mobile Communications Division, \\
+        Samsung Electronics Co., Ltd.}\\
+        \textsf{minhyung.ko@samsung.com}
+
+    \item Soo-Hyun Choi, PhD \\
+        {\small Senior S/W Engineer \\
+        Next Generation S/W R\&D Group, \\
+        Mobile Communications Division, \\
+        Samsung Electronics Co., Ltd.}\\
+        \textsf{sh9.choi@samsung.com}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \acknowledgments     %>>>> equivalent to \section*{ACKNOWLEDGMENTS}
+
+% This unnumbered section is used to identify those who have aided the authors in 
+% understanding or accomplishing the work presented and to acknowledge sources of 
+% funding.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% References %%%%%
+
+% \bibliography{report}   %>>>> bibliography data in report.bib
+% \bibliographystyle{spiebib}   %>>>> makes bibtex use spiebib.bst
+
+\end{document}
